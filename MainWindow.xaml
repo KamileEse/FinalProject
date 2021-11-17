@@ -1,0 +1,150 @@
+﻿<Window x:Class="MySudokuSolver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MySudokuSolver"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="660" Width="800" FontSize="30" PreviewKeyDown="Window_PreviewKeyDown">
+    <StackPanel Orientation="Vertical" Margin="16">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Available characters: " Width="Auto" Height="Auto"/>
+            <TextBox x:Name="tbxAvailableCharacter" >
+                123456789
+            </TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Grid x:Name="SudokuGrid" Height="Auto" Width="Auto" HorizontalAlignment="Left" Margin="0, 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <local:SudokuSquare x:Name="textbox0_0" Grid.Column="0" Grid.Row="0" />
+                <local:SudokuSquare x:Name="textbox0_1" Grid.Column="1" Grid.Row="0" />
+                <local:SudokuSquare x:Name="textbox0_2" Grid.Column="2" Grid.Row="0" />
+                <local:SudokuSquare x:Name="textbox0_3" Grid.Column="3" Grid.Row="0" />
+                <local:SudokuSquare x:Name="textbox0_4" Grid.Column="4" Grid.Row="0" />
+                <local:SudokuSquare x:Name="textbox0_5" Grid.Column="5" Grid.Row="0" />
+                <local:SudokuSquare x:Name="textbox0_6" Grid.Column="6" Grid.Row="0" />
+                <local:SudokuSquare x:Name="textbox0_7" Grid.Column="7" Grid.Row="0" />
+                <local:SudokuSquare x:Name="textbox0_8" Grid.Column="8" Grid.Row="0" />
+                <local:SudokuSquare x:Name="textbox1_0" Grid.Column="0" Grid.Row="1" />
+                <local:SudokuSquare x:Name="textbox1_1" Grid.Column="1" Grid.Row="1" />
+                <local:SudokuSquare x:Name="textbox1_2" Grid.Column="2" Grid.Row="1" />
+                <local:SudokuSquare x:Name="textbox1_3" Grid.Column="3" Grid.Row="1" />
+                <local:SudokuSquare x:Name="textbox1_4" Grid.Column="4" Grid.Row="1" />
+                <local:SudokuSquare x:Name="textbox1_5" Grid.Column="5" Grid.Row="1" />
+                <local:SudokuSquare x:Name="textbox1_6" Grid.Column="6" Grid.Row="1" />
+                <local:SudokuSquare x:Name="textbox1_7" Grid.Column="7" Grid.Row="1" />
+                <local:SudokuSquare x:Name="textbox1_8" Grid.Column="8" Grid.Row="1" />
+                <local:SudokuSquare x:Name="textbox2_0" Grid.Column="0" Grid.Row="2" />
+                <local:SudokuSquare x:Name="textbox2_1" Grid.Column="1" Grid.Row="2" />
+                <local:SudokuSquare x:Name="textbox2_2" Grid.Column="2" Grid.Row="2" />
+                <local:SudokuSquare x:Name="textbox2_3" Grid.Column="3" Grid.Row="2" />
+                <local:SudokuSquare x:Name="textbox2_4" Grid.Column="4" Grid.Row="2" />
+                <local:SudokuSquare x:Name="textbox2_5" Grid.Column="5" Grid.Row="2" />
+                <local:SudokuSquare x:Name="textbox2_6" Grid.Column="6" Grid.Row="2" />
+                <local:SudokuSquare x:Name="textbox2_7" Grid.Column="7" Grid.Row="2" />
+                <local:SudokuSquare x:Name="textbox2_8" Grid.Column="8" Grid.Row="2" />
+                <local:SudokuSquare x:Name="textbox3_0" Grid.Column="0" Grid.Row="3" />
+                <local:SudokuSquare x:Name="textbox3_1" Grid.Column="1" Grid.Row="3" />
+                <local:SudokuSquare x:Name="textbox3_2" Grid.Column="2" Grid.Row="3" />
+                <local:SudokuSquare x:Name="textbox3_3" Grid.Column="3" Grid.Row="3" />
+                <local:SudokuSquare x:Name="textbox3_4" Grid.Column="4" Grid.Row="3" />
+                <local:SudokuSquare x:Name="textbox3_5" Grid.Column="5" Grid.Row="3" />
+                <local:SudokuSquare x:Name="textbox3_6" Grid.Column="6" Grid.Row="3" />
+                <local:SudokuSquare x:Name="textbox3_7" Grid.Column="7" Grid.Row="3" />
+                <local:SudokuSquare x:Name="textbox3_8" Grid.Column="8" Grid.Row="3" />
+                <local:SudokuSquare x:Name="textbox4_0" Grid.Column="0" Grid.Row="4" />
+                <local:SudokuSquare x:Name="textbox4_1" Grid.Column="1" Grid.Row="4" />
+                <local:SudokuSquare x:Name="textbox4_2" Grid.Column="2" Grid.Row="4" />
+                <local:SudokuSquare x:Name="textbox4_3" Grid.Column="3" Grid.Row="4" />
+                <local:SudokuSquare x:Name="textbox4_4" Grid.Column="4" Grid.Row="4" />
+                <local:SudokuSquare x:Name="textbox4_5" Grid.Column="5" Grid.Row="4" />
+                <local:SudokuSquare x:Name="textbox4_6" Grid.Column="6" Grid.Row="4" />
+                <local:SudokuSquare x:Name="textbox4_7" Grid.Column="7" Grid.Row="4" />
+                <local:SudokuSquare x:Name="textbox4_8" Grid.Column="8" Grid.Row="4" />
+                <local:SudokuSquare x:Name="textbox5_0" Grid.Column="0" Grid.Row="5" />
+                <local:SudokuSquare x:Name="textbox5_1" Grid.Column="1" Grid.Row="5" />
+                <local:SudokuSquare x:Name="textbox5_2" Grid.Column="2" Grid.Row="5" />
+                <local:SudokuSquare x:Name="textbox5_3" Grid.Column="3" Grid.Row="5" />
+                <local:SudokuSquare x:Name="textbox5_4" Grid.Column="4" Grid.Row="5" />
+                <local:SudokuSquare x:Name="textbox5_5" Grid.Column="5" Grid.Row="5" />
+                <local:SudokuSquare x:Name="textbox5_6" Grid.Column="6" Grid.Row="5" />
+                <local:SudokuSquare x:Name="textbox5_7" Grid.Column="7" Grid.Row="5" />
+                <local:SudokuSquare x:Name="textbox5_8" Grid.Column="8" Grid.Row="5" />
+                <local:SudokuSquare x:Name="textbox6_0" Grid.Column="0" Grid.Row="6" />
+                <local:SudokuSquare x:Name="textbox6_1" Grid.Column="1" Grid.Row="6" />
+                <local:SudokuSquare x:Name="textbox6_2" Grid.Column="2" Grid.Row="6" />
+                <local:SudokuSquare x:Name="textbox6_3" Grid.Column="3" Grid.Row="6" />
+                <local:SudokuSquare x:Name="textbox6_4" Grid.Column="4" Grid.Row="6" />
+                <local:SudokuSquare x:Name="textbox6_5" Grid.Column="5" Grid.Row="6" />
+                <local:SudokuSquare x:Name="textbox6_6" Grid.Column="6" Grid.Row="6" />
+                <local:SudokuSquare x:Name="textbox6_7" Grid.Column="7" Grid.Row="6" />
+                <local:SudokuSquare x:Name="textbox6_8" Grid.Column="8" Grid.Row="6" />
+                <local:SudokuSquare x:Name="textbox7_0" Grid.Column="0" Grid.Row="7" />
+                <local:SudokuSquare x:Name="textbox7_1" Grid.Column="1" Grid.Row="7" />
+                <local:SudokuSquare x:Name="textbox7_2" Grid.Column="2" Grid.Row="7" />
+                <local:SudokuSquare x:Name="textbox7_3" Grid.Column="3" Grid.Row="7" />
+                <local:SudokuSquare x:Name="textbox7_4" Grid.Column="4" Grid.Row="7" />
+                <local:SudokuSquare x:Name="textbox7_5" Grid.Column="5" Grid.Row="7" />
+                <local:SudokuSquare x:Name="textbox7_6" Grid.Column="6" Grid.Row="7" />
+                <local:SudokuSquare x:Name="textbox7_7" Grid.Column="7" Grid.Row="7" />
+                <local:SudokuSquare x:Name="textbox7_8" Grid.Column="8" Grid.Row="7" />
+                <local:SudokuSquare x:Name="textbox8_0" Grid.Column="0" Grid.Row="8" />
+                <local:SudokuSquare x:Name="textbox8_1" Grid.Column="1" Grid.Row="8" />
+                <local:SudokuSquare x:Name="textbox8_2" Grid.Column="2" Grid.Row="8" />
+                <local:SudokuSquare x:Name="textbox8_3" Grid.Column="3" Grid.Row="8" />
+                <local:SudokuSquare x:Name="textbox8_4" Grid.Column="4" Grid.Row="8" />
+                <local:SudokuSquare x:Name="textbox8_5" Grid.Column="5" Grid.Row="8" />
+                <local:SudokuSquare x:Name="textbox8_6" Grid.Column="6" Grid.Row="8" />
+                <local:SudokuSquare x:Name="textbox8_7" Grid.Column="7" Grid.Row="8" />
+                <local:SudokuSquare x:Name="textbox8_8" Grid.Column="8" Grid.Row="8" />
+
+                <Border BorderThickness="3" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="180" Height="180" BorderBrush="Teal"></Border>
+                <Border BorderThickness="3" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="180" Height="180" BorderBrush="Teal"></Border>
+                <Border BorderThickness="3" Grid.Column="6" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="180" Height="180" BorderBrush="Teal"></Border>
+                <Border BorderThickness="3" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="180" Height="180" BorderBrush="Teal"></Border>
+                <Border BorderThickness="3" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="180" Height="180" BorderBrush="Teal"></Border>
+                <Border BorderThickness="3" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="180" Height="180" BorderBrush="Teal"></Border>
+                <Border BorderThickness="3" Grid.Row="6" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="180" Height="180" BorderBrush="Teal"></Border>
+                <Border BorderThickness="3" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="180" Height="180" BorderBrush="Teal"></Border>
+                <Border BorderThickness="3" Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="180" Height="180" BorderBrush="Teal"></Border>
+
+            </Grid>
+            <StackPanel Orientation="Vertical" Margin="20, 10">
+                <Button x:Name="btnTest" Padding="10, 5, 10, 5" Click="btnTest_Click" Margin="5">
+                    Load game
+                </Button>
+                <Button x:Name="btnShowNotes" Padding="10, 5, 10, 5" Click="btnSolve_Click" Margin="5">
+                    Solve
+                </Button>
+                <Button x:Name="btnClearNotes" Padding="10, 5, 10, 5" Click="btnClearNotes_Click" Margin="5">
+                    Clear notes
+                </Button>
+                <Button x:Name="btnConflicts" Padding="10, 5, 10, 5" Click="btnConflict_Click" Margin="5">
+                    Conflicts
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>
